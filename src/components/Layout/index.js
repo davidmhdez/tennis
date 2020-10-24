@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../Footer';
 import Header from '../header';
 import './styles.scss';
 
@@ -9,6 +10,7 @@ function Layout(props) {
             <main>
                 {props.children}
             </main>
+            <Footer/>
         </>
     );
 }

@@ -1,0 +1,60 @@
+@import '../../utils/sass/colors';
+
+footer{
+    background-color: $green;
+    width: 100%;
+    min-height: 203px;
+    padding-left: 78px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    nav{
+        .page-nav{
+            width: 440px;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            margin-bottom: 15px;
+            padding: 0;
+            margin-top: 0;
+            margin-bottom: 20px;
+
+            li {
+                
+                a{
+                    color: #2b3049;
+                    font-size: 13px;
+                    letter-spacing: 1.14px;
+                }
+    
+                .active{
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .social-networks{
+            display: grid;
+            grid-auto-flow: column;
+            grid-gap: 12px;
+            list-style: none;
+            width: fit-content;
+            padding: 0;
+            margin: 0;
+
+            img{
+                width: 31px;
+                height: 31px;
+            }
+        }
+    }
+
+    .footer-logo{
+        width: 55px;
+        height: 55px;
+        position: absolute;
+        top: 77px;
+        right: 63px;
+    }
+}
