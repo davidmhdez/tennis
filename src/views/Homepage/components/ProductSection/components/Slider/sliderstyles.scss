@@ -1,0 +1,88 @@
+@import '../../../../../../utils/sass/typography';
+@import '../../../../../../utils/sass/colors';
+
+.slider-bg{
+    width: 530px;
+    height: 468px;
+    display: flex!important;
+    justify-content: flex-end;
+    align-items: center;
+
+    .container{
+        width: 250px;
+        margin-right: 67px;
+
+        h5{
+            @include text-style(4);
+            font-weight: 500;
+            margin-top: 0;
+            margin-bottom: 25px;
+
+            span{
+                font-weight: bold;
+            }
+        }
+
+        p{
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: 0.51px;
+            color: $white
+        }
+
+        .steps{
+            display: grid;
+            grid-auto-flow: column;
+            grid-gap: 24px;
+            width: fit-content;
+            margin-bottom: 35.2px;
+
+            div{
+                width: 8px;
+                height: 8px;
+                background-color: #ebebeb;
+                border-radius: 50%;
+            }
+
+            .active{
+                background-color: $green;
+            }
+        }
+
+        .slider-controls{
+            display: flex;
+            
+            button{
+                border-radius: 50%;
+                width: 54px;
+                height: 54px;
+                font-size: 13px;
+                background-color: transparent;
+                border: 1px solid $white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                &:focus{
+                    outline: none;
+                }
+            }
+
+            #prev{
+                margin-right: 19px;
+
+                img{
+                    transform: rotate(-180deg);
+                }
+            }
+
+            #next{
+                background-color: $green;
+                border-color: $green;
+            }
+
+
+        }
+    }
+}

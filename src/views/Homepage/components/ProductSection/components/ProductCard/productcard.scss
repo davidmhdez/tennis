@@ -1,0 +1,25 @@
+@import '../../../../../../utils/sass/colors';
+
+.product-card{
+    position: relative;
+
+    img{
+        width: 288px;
+        height: 344px;
+    }
+
+    span{
+        position: absolute;
+        top: 11px;
+        left: 17px;
+        background-color: $green;
+        color: $white;
+        width: 39px;
+        height: 39px;
+        border-radius: 50%;
+        font-size: 17px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -20,6 +20,7 @@
             @include text-style(4);
             color: #1e2335;
             margin-top: 0;
+            margin-bottom: 35px;
             position: relative;
             font-weight: 500;
             max-width: 500px;
@@ -43,6 +44,7 @@
             align-items: flex-end;
 
             p{
+                margin-top: 0;
                 color: #787878;
                 font-size: 18px;
                 line-height: 32px;
