@@ -1,5 +1,7 @@
 $white: #ffffff;
+$green: #cbe346;
+$gray: #f3f4f8;
 
-@mixin test {
-    color: white;
+@mixin text-green {
+    color: $green;
 }

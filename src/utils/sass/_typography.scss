@@ -57,6 +57,14 @@ $-text-styles: (
         font-style: normal;
         font-stretch: normal;
     }
+
+    @font-face {
+        font-family: "Helvetica Neue";
+        src: url("../../fonts/HelveticaNeue/HelveticaNeueMed.ttf");
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+    }
 }
 
 @mixin text-style($style-number: 1){

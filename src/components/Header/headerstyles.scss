@@ -29,7 +29,6 @@ header{
             padding: 0;
 
             a{
-                text-decoration: none;
                 @include text-style(2);
                 font-weight: normal;
             }

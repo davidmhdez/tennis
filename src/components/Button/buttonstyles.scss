@@ -1,0 +1,28 @@
+@import '../../utils/sass/colors';
+@import '../../utils/sass/typography';
+
+.linkbutton {
+    @include text-style(5);
+    line-height: 28px;
+    letter-spacing: 1.01px;
+    font-weight: bold;
+    padding: 15px 49px 15px 30px;
+    border: 1px solid $white;
+    width: fit-content;
+    border-radius: 26.5px;
+
+    svg{
+        margin-bottom: 1px;
+        margin-left: 10px;
+    }
+}
+
+.linkbutton-black{
+    $black: #282e47;
+    color: $black;
+    border-color: $black;
+
+    svg > path{
+        fill: $black;
+    }
+}
