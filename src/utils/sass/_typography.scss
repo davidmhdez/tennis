@@ -1,0 +1,75 @@
+@import './colors';
+
+$-style1: (
+    'font-size': 16px,
+    'letter-spacing': 1.5px,
+    'color': $white
+);
+
+$-style2: (
+    'font-size': 16px,
+    'letter-spacing': 1.4px,
+    'font-weight': bold,
+    'color': $white
+);
+
+$-style3: (
+    'font-size': 53px,
+    'line-height': 68px,
+    'letter-spacing': -0.05px,
+    'color': $white
+);
+
+$-style4: (
+    'font-size': 50px,
+    'line-height': 57px,
+    'letter-spacing': -0.06px,
+    'color': $white
+);
+
+$-style5: (
+    'font-size': 13px,
+    'letter-spacing': 1.14px,
+    'color': $white
+);
+
+$-text-styles: (
+    1: $-style1,
+    2: $-style2,
+    3: $-style3,
+    4: $-style4,
+    5: $-style5
+);
+
+@mixin helvetica-config {
+    @font-face {
+        font-family: "Helvetica Neue";
+        src: url("../../fonts/HelveticaNeue/HelveticaNeue.ttf");
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+    }
+    
+    @font-face {
+        font-family: "Helvetica Neue";
+        src: url("../../fonts/HelveticaNeue/HelveticaNeueBd.ttf");
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+    }
+}
+
+@mixin text-style($style-number: 1){
+    @if map-has-key($-text-styles, $style-number){
+
+        $style: map-get($-text-styles , $style-number);
+        @each $prop, $value in $style {
+            #{$prop}: $value;
+        }
+
+    }@else{
+        $available-values: map-keys($-text-styles );
+        @error 'the size entered is incorrect, the available sizes are: #{$available-values}';
+    }
+
+}

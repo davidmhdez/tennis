@@ -1,0 +1,16 @@
+@import '../../utils/sass/typography';
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+@include helvetica-config;
+
+body{
+    font-family: "Helvetica Neue";
+    font-size: 16px;
+}

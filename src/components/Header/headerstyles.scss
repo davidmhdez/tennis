@@ -1,0 +1,70 @@
+@import '../../utils/sass/colors';
+@import '../../utils/sass/typography';
+
+header{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+
+    img{
+        width: 37px;
+        height: 37px;
+        position: absolute;
+        top: 25px;
+        left: 36px;
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 38px 98px 0 173px;
+
+        ul{
+            list-style: none;
+            display: flex;
+            width: 100%;
+            max-width: 535px;
+            justify-content: space-between;
+            padding: 0;
+
+            a{
+                text-decoration: none;
+                @include text-style(2);
+                font-weight: normal;
+            }
+        }
+
+        .languaje-switch{
+            
+            input{
+                display: none;
+
+                &:checked + label {
+                    font-weight: bold;
+                }
+            }
+
+            label{
+                @include text-style(5);
+                margin: 0 7.5px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.active-page{
+    font-weight: bold;
+    position: relative;
+
+    &:after{
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        width: 17px;
+        height: 2px;
+        background-color: $white;
+    }
+}
