@@ -1,22 +1,45 @@
 @import '../../../../utils/sass/colors';
 @import '../../../../utils/sass/typography';
+@import '../../../../utils/sass/media-queries';
 
 .main-hero{
     width: 100%;
-    height: 791px;  
-    display: flex;  
+    height: 70vh;  
+    display: flex;
+
+    @include mq-lg{
+        height: 791px;
+    }
 
     .hero-container{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 600px;
-        margin-left: 173px;
+        align-items: center;
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 20px;
+
+        @include mq-sm{
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        @include mq-md{
+            margin: 0 0 0 173px;
+            padding: 0;
+        }
 
         h2{
-            @include text-style(3);
+            font-size: 40px;
+            color: $white;
             margin-top: 0;
             font-weight: 500;
+
+            @include mq-sm{
+                @include text-style(3);
+            }
 
             span{
                 @include text-green;

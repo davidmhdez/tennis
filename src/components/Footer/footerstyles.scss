@@ -1,26 +1,37 @@
 @import '../../utils/sass/colors';
+@import '../../utils/sass/media-queries';
 
 footer{
     background-color: $green;
     width: 100%;
     min-height: 203px;
-    padding-left: 78px;
+    padding: 35px 0 35px 78px;
     position: relative;
     display: flex;
     align-items: center;
 
     nav{
         .page-nav{
-            width: 440px;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             list-style: none;
             margin-bottom: 15px;
             padding: 0;
             margin-top: 0;
             margin-bottom: 20px;
 
+            @include mq-md{
+                width: 440px;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
             li {
+                margin-bottom: 10px;
+                
+                @include mq-md{
+                    margin-bottom: 0;
+                }
                 
                 a{
                     color: #2b3049;

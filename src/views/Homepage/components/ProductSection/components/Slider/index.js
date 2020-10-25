@@ -10,8 +10,8 @@ function Slider() {
         query{
             file(relativePath: {eq: "sliderbg.png"}){
                 childImageSharp{
-                    fixed(width: 530){
-                        ...GatsbyImageSharpFixed
+                    fluid{
+                        ...GatsbyImageSharpFluid
                     }
                 }
             }
@@ -22,7 +22,7 @@ function Slider() {
 
     return (
         <div className="slider">
-            <BackgroundImage className="slider-bg" fixed={file.childImageSharp.fixed}>
+            <BackgroundImage className="slider-bg" fluid={file.childImageSharp.fluid}>
                 <div className="container">
                     <h5>Nuestras <span>Raquetas</span></h5>
                     <p>Conoce nuestras raquetas y aprende a jugar Tennis cómo un profesional.</p>

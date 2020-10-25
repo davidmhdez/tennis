@@ -18,7 +18,7 @@ function Banner() {
     `);
 
     return (
-        <Img className="" fluid={file.childImageSharp.fluid}/>
+        <Img className="banner" fluid={file.childImageSharp.fluid}/>
     );
 }
 

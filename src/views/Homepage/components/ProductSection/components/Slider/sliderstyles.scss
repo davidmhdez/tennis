@@ -1,16 +1,22 @@
 @import '../../../../../../utils/sass/typography';
 @import '../../../../../../utils/sass/colors';
+@import '../../../../../../utils/sass/media-queries';
 
 .slider-bg{
-    width: 530px;
+    width: 100%;
     height: 468px;
     display: flex!important;
     justify-content: flex-end;
     align-items: center;
 
+    @include mq-lg{
+        width: 530px;
+    }
+
     .container{
         width: 250px;
         margin-right: 67px;
+        margin-left: 40px;
 
         h5{
             @include text-style(4);

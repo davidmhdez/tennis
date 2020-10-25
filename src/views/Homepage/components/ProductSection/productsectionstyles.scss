@@ -1,3 +1,10 @@
+@import '../../../../utils/sass/media-queries';
+
 .product-section{
     display: flex;
+    flex-direction: column;
+
+    @include mq-lg{
+        flex-direction: row;
+    }
 }
