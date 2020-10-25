@@ -1,9 +1,15 @@
 .product-wrapper{
-    display: grid;
-    grid-gap: 36px;
-    grid-auto-flow: column;
+    display: flex;
     align-items: center;
     margin-left: 52px;
     overflow-x: hidden;
     padding: 40px 0;
+
+    div:first-child{
+        margin-left: 0;
+    }
+
+    div:last-child{
+        margin-right: 0;
+    }
 }

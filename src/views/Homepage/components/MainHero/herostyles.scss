@@ -36,6 +36,7 @@
             color: $white;
             margin-top: 0;
             font-weight: 500;
+            max-width: 600px;
 
             @include mq-sm{
                 @include text-style(3);

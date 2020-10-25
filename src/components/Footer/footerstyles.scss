@@ -46,17 +46,15 @@ footer{
         }
 
         .social-networks{
-            display: grid;
-            grid-auto-flow: column;
-            grid-gap: 12px;
             list-style: none;
-            width: fit-content;
+            display: flex;
             padding: 0;
-            margin: 0;
+            margin: 0 -6px 0 -6px;
 
             img{
                 width: 31px;
                 height: 31px;
+                margin: 0 6px;
             }
         }
     }
