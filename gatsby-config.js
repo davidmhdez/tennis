@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/tennis',
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
