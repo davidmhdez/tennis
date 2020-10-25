@@ -1,40 +1,91 @@
 @import '../../utils/sass/colors';
 @import '../../utils/sass/typography';
+@import '../../utils/sass/media-queries';
 
 header{
     position: fixed;
     z-index: 5;
     width: 100%;
+    height: 85px;
+    transition: .5s ease;
+    transition-property: background-color;
 
-    img{
+    @include mq-md{
+        height: auto;
+    }
+
+    #logo{
         width: 37px;
         height: 37px;
         position: absolute;
         top: 25px;
         left: 36px;
+        z-index: 6;
     }
 
     nav{
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        margin: 38px 98px 0 173px;
+        flex-direction: column;
+        background-color: $green;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s ease;
+        transition-property: visibility, opacity;
+
+        @include mq-md{
+            justify-content: space-between;
+            flex-direction: row;
+            margin: 38px 98px 0 120px;
+            background-color: transparent;
+            width: auto;
+            height: auto;
+            position: static;
+            opacity: 1;
+            visibility: visible;
+            margin-bottom: 15px;
+        }
+
+        @include mq-lg{
+            margin-left: 173px;
+        }
 
         ul{
             list-style: none;
-            display: flex;
             width: 100%;
             max-width: 535px;
-            justify-content: space-between;
             padding: 0;
+            margin-top: 100px;
+            text-align: center;
+
+            li{
+                margin-bottom: 40px;
+            }
 
             a{
                 @include text-style(2);
                 font-weight: normal;
             }
+
+            @include mq-md{
+                display: flex;
+                justify-content: space-between;
+                margin-top: 16px;
+                text-align: left;
+
+                li{
+                    margin-bottom: 0;
+                }
+            }
         }
 
         .languaje-switch{
+            @include mq-md{
+                margin-left: 20px;
+            }
             
             input{
                 display: none;
@@ -51,6 +102,33 @@ header{
             }
         }
     }
+
+    #mobile-menu{
+        display: none;
+
+        &:checked ~ nav{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    #bars{
+        position: absolute;
+        top: 27px;
+        right: 36px;
+        cursor: pointer;
+        z-index: 6;
+
+        img{
+            width: 30px;
+            height: 30px;
+        }
+
+        @include mq-md{
+            display: none;
+        }
+    }
+
 }
 
 .active-page{
@@ -66,4 +144,8 @@ header{
         height: 2px;
         background-color: $white;
     }
+}
+
+.header-scroll{
+    background-color: $green;
 }
